@@ -1,0 +1,18 @@
+# Set True if you want to download fresh data file. Else False.
+download_new_data: False
+
+# Name of the train data file. 
+# Used to write downloaded training data file if "download_new_data" is True
+# Used to read training data
+train_file_name : train.csv
+
+features: 
+  - sepal_length
+  - sepal_width
+  - petal_length
+  - petal_width
+
+target: target
+
+random_state: 100
+test_size: 0.20
