@@ -16,3 +16,9 @@ target: target
 
 random_state: 100
 test_size: 0.20
+
+multiply_variables: 
+  - sepal_width
+  - petal_length
+
+multiply_value: 10

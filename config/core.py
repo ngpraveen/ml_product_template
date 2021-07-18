@@ -16,6 +16,9 @@ class Config(BaseModel):
     random_state: int
     test_size: float
 
+    multiply_variables: List[str]
+    multiply_value: int
+
 
 def read_config():
     """Reads config file (yml) and returns it as text (str)"""
