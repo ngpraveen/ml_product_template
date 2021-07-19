@@ -11,6 +11,10 @@ CONFIG_FILE = ROOT / "config/config.yml"
 class Config(BaseModel):
     download_new_data : bool
     train_file_name : str
+    pipeline_save_file: str
+    pipeline_save_dir: str
+
+
     features: List[str]
     target: str
     random_state: int
@@ -18,6 +22,7 @@ class Config(BaseModel):
 
     multiply_variables: List[str]
     multiply_value: int
+
 
 
 def read_config():

@@ -5,6 +5,8 @@ download_new_data: False
 # Used to write downloaded training data file if "download_new_data" is True
 # Used to read training data
 train_file_name : train.csv
+pipeline_save_dir: trained_models
+pipeline_save_file: model_output.pkl
 
 features: 
   - sepal_length
@@ -17,6 +19,8 @@ target: target
 random_state: 100
 test_size: 0.20
 
+
+#feature engineerig 
 multiply_variables: 
   - sepal_width
   - petal_length
