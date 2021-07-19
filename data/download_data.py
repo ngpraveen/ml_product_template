@@ -1,37 +1,33 @@
 #!/usr/bin/env python
 
 
-def get_data(destin_dir = None, file_name = None):
-    #import libraries
+def get_data(destin_dir=None, file_name=None):
+    # import libraries
     import pandas as pd
     from sklearn.datasets import load_iris
     from pathlib import Path
-    
-    #load data
+
+    # load data
     data = load_iris()
-    
-    
-    #load featuers and target variable
+
+    # load featuers and target variable
     X = data['data']
     y = data['target']
-    target_names = data['target_names']
+    # target_names = data['target_names']
     feature_names = data['feature_names']
-    
-    
-    #convert to pandas dataframes and 
+
+    # convert to pandas dataframes and
     X = pd.DataFrame(X, columns=feature_names)
     y = pd.DataFrame(y)
-    
-    
-    #merget them to a single dataframe
-    df = pd.concat([X,y], axis=1).rename(columns={0:'target'})
+
+    # merget them to a single dataframe
+    df = pd.concat([X, y], axis=1).rename(columns={0: 'target'})
     df.head()
-    
-    
+
     # clean up the column names
     df.columns = df.columns.str.strip(" (cm)").str.replace(" ", "_")
     df.head()
-    
+
     # if a path is provided as an argument, file is written to that path
     # else the file is written to default location
     if not destin_dir:
@@ -50,6 +46,3 @@ def get_data(destin_dir = None, file_name = None):
 
 if __name__ == "__main__":
     get_data()
-
-
-
