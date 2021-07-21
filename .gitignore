@@ -1,3 +1,5 @@
 env*
 data/*.csv
 trained_models/*
+.tox/
+*/__pycache__

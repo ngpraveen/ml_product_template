@@ -1,5 +1,6 @@
-from src.data_manager import load_pipeline, load_data
 from config.core import config
+from src.data_manager import load_data, load_pipeline
+
 TARGET = config.target
 
 pipe = load_pipeline()

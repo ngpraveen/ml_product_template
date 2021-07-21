@@ -1,8 +1,8 @@
-from config.core import config
 from sklearn.model_selection import train_test_split
+
+from config.core import config
 from src.data_manager import load_data, save_pipeline
 from src.pipeline import pipe
-
 
 # load data from local file
 data = load_data()
