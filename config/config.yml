@@ -6,7 +6,7 @@ download_new_data: False
 # Used to read training data
 train_file_name : train.csv
 pipeline_save_dir: trained_models
-pipeline_save_file: model_output.pkl
+pipeline_save_file: model_output.joblib
 
 features: 
   - sepal_length
