@@ -1,5 +1,4 @@
 import sys
-import os #debug
 
 import joblib
 import pandas as pd
@@ -29,10 +28,6 @@ def make_prediction(sl, sw, pl, pw):
         }
     )
 
-    #debug
-    print(os.getcwd())
-    print(os.listdir("../"))
-    print(os.listdir("../trained_models"))
     model = joblib.load("../trained_models/model_output.joblib")
     prediction_ = model.predict(data)[0]
     output = target_dict.get(prediction_, "None")
