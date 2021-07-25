@@ -48,5 +48,7 @@ async def predict_func(
     petal_width: str = Form(...),
 ):
 
-    prediction = make_prediction(sepal_length, sepal_width, petal_length, petal_width)
+    prediction = make_prediction(
+        sepal_length, sepal_width, petal_length, petal_width
+    )
     return {"Prediction": prediction}
